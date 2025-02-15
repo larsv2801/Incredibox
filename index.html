@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link
+    rel="stylesheet"
+    data-purpose="Layout StyleSheet"
+    title="Web Awesome"
+    href="/css/app-wa-9a26f71a0382097754e89a94b43cf564.css?vsn=d"
+  >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-thin.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-solid.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-regular.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-light.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-thin.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone-thin.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone-regular.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone-light.css"
+    >
+<style>
+body{
+margin:0;
+padding:0;
+}
+#mannetjes{
+width:100vw;
+height:50vh;
+background:linear-gradient(80deg,#b6b6b6,#727070);
+display:flex;
+justify-content:center;
+gap:3.5vw;
+border-radius:0px 0px 18px 18px;
+transition:0.3s;
+}
+#geluidjes{
+width:86vw;
+height:calc(50vh - 14vw);
+background-color:white;
+display:flex;
+justify-content:center;
+gap:3vw;
+flex-wrap:wrap;
+padding:7vw;
+}
+.geluidje{
+width:5.5vw;
+height:5.5vw;
+border-radius:15px;
+background-color:orange;
+cursor:pointer;
+transition:0.3s;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+.geluidje:hover{
+width:5.5vw;
+height:5.5vw;
+border-radius:10px;
+transition:0.3s;
+}
+.mannetje{
+margin-top:15vh;
+height:35vh;
+width:auto;
+transition:0.3s;
+}
+.mannetje:hover{
+margin-top:11.45vh;
+transform:scale(1.2);
+transition:0.3s;
+}
+#maat{
+    width:17vw;
+    gap:0.25vw;
+    height:1vw;
+    position:absolute;
+    left:50%;
+    top:6%;
+    transform: translate(-50%,-50%);
+    display:flex;
+}
+.beatvak{
+    width:4vw;
+    height:1vw;
+    background-color:orange;
+}
+ i{
+    color:white;
+    fill:white;
+    font-size:3vw;
+ }
+</style>
+</head>
+<body>
+<div id="maat">
+    <div class="beatvak" id="bv4"></div>
+    <div class="beatvak" id="bv3"></div>
+    <div class="beatvak" id="bv2"></div>
+    <div class="beatvak" id="bv1"></div>
+</div>
+<div id="mannetjes">
+<img id="mannetje1" onclick="stopaudio(1)" class="mannetje" src="https://media.baamboozle.com/uploads/images/1063751/1669905628_6730.webp">
+<img id="mannetje2" onclick="stopaudio(2)" class="mannetje" src="https://media.baamboozle.com/uploads/images/1063751/1669905628_6730.webp">
+<img id="mannetje3" onclick="stopaudio(3)" class="mannetje" src="https://media.baamboozle.com/uploads/images/1063751/1669905628_6730.webp">
+<img id="mannetje4" onclick="stopaudio(4)" class="mannetje" src="https://media.baamboozle.com/uploads/images/1063751/1669905628_6730.webp">
+<img id="mannetje5" onclick="stopaudio(5)" class="mannetje" src="https://media.baamboozle.com/uploads/images/1063751/1669905628_6730.webp">
+<img id="mannetje6" onclick="stopaudio(6)" class="mannetje" src="https://media.baamboozle.com/uploads/images/1063751/1669905628_6730.webp">
+<img id="mannetje7" onclick="stopaudio(7)" class="mannetje" src="https://media.baamboozle.com/uploads/images/1063751/1669905628_6730.webp">
+</div>
+<div id="geluidjes">
+<div class="geluidje" id="geluid1"onclick="voegtoe(1)"><i class="fa-solid fa-play"></i></div>
+<div class="geluidje" id="geluid2" onclick="voegtoe(2)"><i class="fa-solid fa-spa"></i></div>
+<div class="geluidje" id="geluid3" onclick="voegtoe(3)"><i class="fa-solid fa-star"></i></div>
+<div class="geluidje" id="geluid4" onclick="voegtoe(4)"><i class="fa-solid fa-fire-flame-curved"></i></div>
+<div class="geluidje" id="geluid5" onclick="voegtoe(5)"><i class="fa-solid fa-circle"></i></div>
+<div class="geluidje" id="geluid6" onclick="voegtoe(6)"><i class="fa-solid fa-worm"></i></div>
+<div class="geluidje" id="geluid7" onclick="voegtoe(7)"><i class="fa-solid fa-square"></i></div>
+<div class="geluidje" id="geluid8" onclick="voegtoe(8)"><i class="fa-solid fa-clover"></i></div>
+<div class="geluidje" id="geluid9" onclick="voegtoe(9)"><i class="fa-solid fa-location-pin"></i></div>
+<div class="geluidje" id="geluid10" onclick="voegtoe(10)"><i class="fa-solid fa-atom"></i></div>
+<div class="geluidje" id="geluid11" onclick="voegtoe(11)"><i class="fa-solid fa-diamond"></i></div>
+<div class="geluidje" id="geluid12" onclick="voegtoe(12)"><i class="fa-solid fa-disease"></i></div>
+<div class="geluidje" id="geluid13"><i class="fa-solid fa-certificate"></i></div>
+
+
+<audio id="aud1"  loop>
+    <source src="/drum1-kick.mp3" type="audio/mpeg">
+</audio>
+<audio id="aud2" loop>
+    <source src="/drum2-snareb.mp3" type="audio/mpeg">
+</audio>
+<audio id="aud3" loop>
+    <source src="/drum3-touti.mp3" type="audio/mpeg">
+</audio>
+<audio id="aud4" loop>
+    <source src="/drum5-chatom.mp3" type="audio/mpeg">
+</audio>
+<audio id="aud5" loop>
+    <source src="/16-bass.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Melodie -->
+<audio id="aud6" class="melodie" loop>
+    <source src="/melo2-flute.mp3" type="audio/mpeg">
+</audio>
+<audio id="aud7" class="melodie" loop>
+    <source src="/melo1-nananana.mp3" type="audio/mpeg">
+</audio>
+<audio id="aud8" class="melodie" loop>
+    <source src="/11-parimba.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Effect -->
+<audio id="aud9" class="effects" loop>
+    <source src="/effect2-enigmatic.mp3" type="audio/mpeg">
+</audio>
+<audio id="aud10" class="effects" loop>
+    <source src="/effect3-cry.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Chips -->
+<audio id="aud11" class="chips" loop>
+    <source src="/chips1-feel.mp3" type="audio/mpeg">
+</audio>
+<audio id="aud12" class="chips" loop>
+    <source src="/chips3-yeah.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+var mangeluidgeven = 1;
+var man1geluid = 0;
+var man2geluid = 0;
+var man3geluid = 0;
+var man4geluid = 0;
+var man5geluid = 0;
+var man6geluid = 0;
+var man7geluid = 0;
+
+
+function speelaudio(nummer){
+if (man1geluid === 0){mangeluidgeven = 1;} else
+if (man2geluid === 0){mangeluidgeven = 2;} else
+if (man3geluid === 0){mangeluidgeven = 3;} else
+if (man4geluid === 0){mangeluidgeven = 4;} else
+if (man5geluid === 0){mangeluidgeven = 5;} else
+if (man6geluid === 0){mangeluidgeven = 6;} else
+if (man7geluid === 0){mangeluidgeven = 7;}
+var skin = Math.floor(Math.random() * 4) + 1;
+if (skin === 1){
+var link = "/skin1.png";
+} else if (skin === 2){
+var link = "/skin2.png";
+} else if (skin === 3){
+var link = "/skin3.png";
+} else {
+var link = "/skin4.png";
+}
+var audio = document.getElementById('aud' + nummer);
+audio.play();
+document.getElementById("geluid" + nummer).style.backgroundColor = "gray";
+
+if(mangeluidgeven === 1){
+man1geluid = nummer;
+document.getElementById("mannetje" + mangeluidgeven).src = link;
+} else if(mangeluidgeven === 2){
+man2geluid = nummer;
+document.getElementById("mannetje" + mangeluidgeven).src = link;
+} else if(mangeluidgeven === 3){
+man3geluid = nummer;
+document.getElementById("mannetje" + mangeluidgeven).src = link;
+} else if(mangeluidgeven === 4){
+man4geluid = nummer;
+document.getElementById("mannetje" + mangeluidgeven).src = link;
+} else if(mangeluidgeven === 5){
+man5geluid = nummer;
+document.getElementById("mannetje" + mangeluidgeven).src = link;
+} else if(mangeluidgeven === 6){
+man6geluid = nummer;
+document.getElementById("mannetje" + mangeluidgeven).src = link;
+} else if(mangeluidgeven === 7){
+man7geluid = nummer;
+document.getElementById("mannetje" + mangeluidgeven).src = link;
+}
+}
+
+
+function stopaudio(nummer){
+if(nummer === 1){
+var audiostop = man1geluid;
+man1geluid = 0;
+} else if(nummer === 2){
+var audiostop = man2geluid;
+man2geluid = 0;
+} else if(nummer === 3){
+var audiostop = man3geluid;
+man3geluid = 0;
+} else if(nummer === 4){
+var audiostop = man4geluid;
+man4geluid = 0;
+} else if(nummer === 5){
+var audiostop = man5geluid;
+man5geluid = 0;
+} else if(nummer === 6){
+var audiostop = man6geluid;
+man6geluid = 0;
+} else if(nummer === 7){
+var audiostop = man7geluid;
+man7geluid = 0;
+}
+var audio = document.getElementById('aud' + audiostop);
+audio.pause();
+document.getElementById("geluid" + audiostop).style.backgroundColor = "orange";
+document.getElementById("mannetje" + nummer).src= "https://media.baamboozle.com/uploads/images/1063751/1669905628_6730.webp";
+liedjesbezig.pop(); 
+console.log(liedjesbezig.length);
+}
+
+var beat = 4;
+var liedjesstarten = [];
+var liedjesbezig = [];
+
+function verandertijdnog(){
+if(beat != 1){
+    beat--;
+} else {
+beat = 4;
+startnu();
+}
+
+if(beat === 4){
+    document.getElementById("bv4").style.backgroundColor = "orange";
+    document.getElementById("bv3").style.backgroundColor = "orange";
+    document.getElementById("bv2").style.backgroundColor = "orange";
+    document.getElementById("bv1").style.backgroundColor = "orange";
+} else if(beat === 3){
+    document.getElementById("bv4").style.backgroundColor = "gray";
+    document.getElementById("bv3").style.backgroundColor = "orange";
+    document.getElementById("bv2").style.backgroundColor = "orange";
+    document.getElementById("bv1").style.backgroundColor = "orange";
+} else if(beat === 2){
+    document.getElementById("bv4").style.backgroundColor = "gray";
+    document.getElementById("bv3").style.backgroundColor = "gray";
+    document.getElementById("bv2").style.backgroundColor = "orange";
+    document.getElementById("bv1").style.backgroundColor = "orange";
+} else if(beat === 1){
+    document.getElementById("bv4").style.backgroundColor = "gray";
+    document.getElementById("bv3").style.backgroundColor = "gray";
+    document.getElementById("bv2").style.backgroundColor = "gray";
+    document.getElementById("bv1").style.backgroundColor = "orange";
+}
+}
+
+setInterval(verandertijdnog,1000);
+verandertijdnog();
+
+function voegtoe(nummer){
+if (liedjesbezig.length >= 7){
+    return;
+}
+document.getElementById("geluid" + nummer).style.backgroundColor = "black";
+liedjesstarten.push(nummer);
+liedjesbezig.push(nummer);
+console.log(liedjesbezig.length);
+}
+
+function startnu(){
+    for(let i = 0; i < liedjesstarten.length; i++){
+        speelaudio(liedjesstarten[i]);
+    }
+    liedjesstarten = [];
+    }
+</script>
+</div>
+</body>
+</html>
