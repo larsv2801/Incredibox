@@ -114,6 +114,12 @@ margin-top:15vh;
 height:35vh;
 width:auto;
 transition:0.3s;
+user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 .mannetje:hover{
 margin-top:11.45vh;
@@ -150,13 +156,13 @@ transition:0.3s;
     <div class="beatvak" id="bv1"></div>
 </div>
 <div id="mannetjes">
-<img id="mannetje1" onclick="stopaudio(1)" class="mannetje" src="https://media.baamboozle.com/uploads/images/1063751/1669905628_6730.webp">
-<img id="mannetje2" onclick="stopaudio(2)" class="mannetje" src="https://media.baamboozle.com/uploads/images/1063751/1669905628_6730.webp">
-<img id="mannetje3" onclick="stopaudio(3)" class="mannetje" src="https://media.baamboozle.com/uploads/images/1063751/1669905628_6730.webp">
-<img id="mannetje4" onclick="stopaudio(4)" class="mannetje" src="https://media.baamboozle.com/uploads/images/1063751/1669905628_6730.webp">
-<img id="mannetje5" onclick="stopaudio(5)" class="mannetje" src="https://media.baamboozle.com/uploads/images/1063751/1669905628_6730.webp">
-<img id="mannetje6" onclick="stopaudio(6)" class="mannetje" src="https://media.baamboozle.com/uploads/images/1063751/1669905628_6730.webp">
-<img id="mannetje7" onclick="stopaudio(7)" class="mannetje" src="https://media.baamboozle.com/uploads/images/1063751/1669905628_6730.webp">
+<img id="mannetje1" onclick="stopaudio(1)" class="mannetje" src="/normaalskin.png">
+<img id="mannetje2" onclick="stopaudio(2)" class="mannetje" src="/normaalskin.png">
+<img id="mannetje3" onclick="stopaudio(3)" class="mannetje" src="/normaalskin.png">
+<img id="mannetje4" onclick="stopaudio(4)" class="mannetje" src="/normaalskin.png">
+<img id="mannetje5" onclick="stopaudio(5)" class="mannetje" src="/normaalskin.png">
+<img id="mannetje6" onclick="stopaudio(6)" class="mannetje" src="/normaalskin.png">
+<img id="mannetje7" onclick="stopaudio(7)" class="mannetje" src="/normaalskin.png">
 </div>
 <div id="geluidjes">
 <div class="geluidje" id="geluid1"onclick="voegtoe(1)"><i class="fa-solid fa-play"></i></div>
@@ -175,46 +181,46 @@ transition:0.3s;
 
 
 <audio id="aud1"  loop>
-    <source src="drum1-kick.mp3" type="audio/mpeg">
+    <source src="/drum1-kick.mp3" type="audio/mpeg">
 </audio>
 <audio id="aud2" loop>
-    <source src="drum2-snareb.mp3" type="audio/mpeg">
+    <source src="/drum2-snareb.mp3" type="audio/mpeg">
 </audio>
 <audio id="aud3" loop>
-    <source src="drum3-touti.mp3" type="audio/mpeg">
+    <source src="/drum3-touti.mp3" type="audio/mpeg">
 </audio>
 <audio id="aud4" loop>
-    <source src="drum5-chatom.mp3" type="audio/mpeg">
+    <source src="/drum5-chatom.mp3" type="audio/mpeg">
 </audio>
 <audio id="aud5" loop>
-    <source src="16-bass.mp3" type="audio/mpeg">
+    <source src="/16-bass.mp3" type="audio/mpeg">
 </audio>
 
 <!-- Melodie -->
 <audio id="aud6" class="melodie" loop>
-    <source src="melo2-flute.mp3" type="audio/mpeg">
+    <source src="/melo2-flute.mp3" type="audio/mpeg">
 </audio>
 <audio id="aud7" class="melodie" loop>
-    <source src="melo1-nananana.mp3" type="audio/mpeg">
+    <source src="/melo1-nananana.mp3" type="audio/mpeg">
 </audio>
 <audio id="aud8" class="melodie" loop>
-    <source src="11-parimba.mp3" type="audio/mpeg">
+    <source src="/11-parimba.mp3" type="audio/mpeg">
 </audio>
 
 <!-- Effect -->
 <audio id="aud9" class="effects" loop>
-    <source src="effect2-enigmatic.mp3" type="audio/mpeg">
+    <source src="/effect2-enigmatic.mp3" type="audio/mpeg">
 </audio>
 <audio id="aud10" class="effects" loop>
-    <source src="effect3-cry.mp3" type="audio/mpeg">
+    <source src="/effect3-cry.mp3" type="audio/mpeg">
 </audio>
 
 <!-- Chips -->
 <audio id="aud11" class="chips" loop>
-    <source src="chips1-feel.mp3" type="audio/mpeg">
+    <source src="/chips1-feel.mp3" type="audio/mpeg">
 </audio>
 <audio id="aud12" class="chips" loop>
-    <source src="chips3-yeah.mp3" type="audio/mpeg">
+    <source src="/chips3-yeah.mp3" type="audio/mpeg">
 </audio>
 
 <script>
@@ -236,15 +242,19 @@ if (man4geluid === 0){mangeluidgeven = 4;} else
 if (man5geluid === 0){mangeluidgeven = 5;} else
 if (man6geluid === 0){mangeluidgeven = 6;} else
 if (man7geluid === 0){mangeluidgeven = 7;}
-var skin = Math.floor(Math.random() * 4) + 1;
+var skin = Math.floor(Math.random() * 6) + 1;
 if (skin === 1){
-var link = "skin1.png";
+var link = "/skin1.png";
 } else if (skin === 2){
-var link = "skin2.png";
+var link = "/skin2.png";
 } else if (skin === 3){
-var link = "skin3.png";
-} else {
-var link = "skin4.png";
+var link = "/skin3.png";
+} else if (skin === 4) {
+var link = "/skin4.png";
+} else if (skin === 5) {
+var link = "/skin5.png";
+}else {
+var link = "/skin6.png";
 }
 var audio = document.getElementById('aud' + nummer);
 audio.play();
@@ -300,8 +310,9 @@ man7geluid = 0;
 }
 var audio = document.getElementById('aud' + audiostop);
 audio.pause();
+audio.currentTime = 0;
 document.getElementById("geluid" + audiostop).style.backgroundColor = "orange";
-document.getElementById("mannetje" + nummer).src= "https://media.baamboozle.com/uploads/images/1063751/1669905628_6730.webp";
+document.getElementById("mannetje" + nummer).src= "/normaalskin.png";
 liedjesbezig.pop(); 
 console.log(liedjesbezig.length);
 }
